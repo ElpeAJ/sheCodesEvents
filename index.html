@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning about JS Events</title>
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <h1>⌨️ JS Events</h1>
+    <a href="#" id="follow">Follow</a>
+    <script>
+      function changeText() {
+        followLink.innerHTML = "Following";
+      }
+
+      function keepText(event) {
+        event.preventDefault();
+        // event.target.innerHTML = "Following";
+        // let link = document.querySelector("#follow");
+        // link.innerHTML = "Follow";
+        followLink.innerHTML = "Follow";
+      }
+      let followLink = document.querySelector("#follow");
+      followLink.addEventListener("click", changeText);
+      followLink.addEventListener("dblclick", keepText);
+      // function stopClick(event) {
+      //   event.preventDefault();
+      //   let ans = prompt("Why do you want to learn Events?");
+      //   alert("Ok we will be in touch");
+      // }
+      // let heading = document.querySelector("h1");
+      // heading.addEventListener("click", stopClick);
+    </script>
+  </body>
+</html>
